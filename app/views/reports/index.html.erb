@@ -1,0 +1,32 @@
+<div class="well">
+	<h2>Medical Reports</h2>
+	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique animi..</p>
+
+	<div class="pull-right">
+    <% if current_user.present? %>
+        <%= link_to "Upload report", new_report_path, class: "btn btn-primary"%>
+    <% end %>
+    <%= link_to "download report", report_reports_path, class: "btn btn-success"%>
+	</div><br/>
+</div>
+
+
+<div class="well">
+	<h2>About Us</h2>
+	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique animi..</p>
+
+	<div>
+    <%= link_to "Read more", "#", class: "btn btn-success btn-mini"%>
+</div><br/>
+</div>
+
+<div class="well">
+	<h2>Contact Us</h2>
+	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique animi..</p>
+
+	<div>
+    <%= link_to "Read more", "#", class: "btn btn-success btn-mini"%>
+</div><br/></div>
+
+
+

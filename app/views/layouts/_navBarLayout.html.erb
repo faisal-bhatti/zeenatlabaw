@@ -1,0 +1,30 @@
+
+<div class="navbar navbar-static-top">
+
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "Zeenat Lab Arifwala", root_path, class: "brand" %>
+
+        <div class="nav-collapse">
+          <ul class="nav pull-right">
+            <% if current_user %>
+              <li><%= link_to 'Upload report',"#"  %></li> 
+              <li> <%= link_to 'Learn More',"#"  %></li>
+              <li> <%= link_to 'About us', "#" %></li>
+              <li class="divider-vertical"></li>
+              <li> <%=link_to "#{current_user.username}".html_safe, "#"%></li>
+              <li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li> <%= link_to 'Learn More', "#" %></li>
+              <li> <%= link_to 'About us', "#" %></li>
+            <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
